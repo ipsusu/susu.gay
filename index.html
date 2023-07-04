@@ -1,73 +1,79 @@
 <html>
-  <head>
-     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
-      <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <style>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <style>
     .center {
       margin: auto;
       width: 50%;
-      }
+    }
 
     .ipsuimg {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      }
-      
-      .solidarity {
-        animation: bounceInUp;
-        animation-fill-mode: both;
-        animation-delay: 1s;
-        animation-duration: 1s;
-      }
-      
-      .top {
-        animation: backInDown;
-        animation-duration: 1s;
+    }
 
-      }
-      
-      #ipsuclap:hover {
-        cursor: pointer;
-      }
-      
-      .clapclass {
-        animation: rubberBand;
-        animation-duration: 0.1s;
-      }
-    </style>
-    <script>
-     function clap() {
-        var snd = new Audio("snd/clap.wav");
-        var element = document.getElementById('ipsuclap');
+    .solidarity {
+      animation: bounceInUp;
+      animation-fill-mode: both;
+      animation-delay: 1s;
+      animation-duration: 1s;
+    }
 
-        element.classList.add('clapclass');
+    .top {
+      animation: backInDown;
+      animation-duration: 1s;
 
-        snd.addEventListener('canplaythrough', function() {
-          setTimeout(function() {
-            element.classList.remove('clapclass');
-          }, 100); // Adjust the delay 1000 = 1s
-        });
+    }
 
-        snd.play();
-      }
-    </script>
-  </head>
-  <body style="background:black;">
-    <div class="top animate__animated">
-      <br>
-      <h1 style="color:white; text-align:center;">susu.gay</h1>
-      <h3 style="color:white; text-align:center;">welcome!</h3>
-      <img id="ipsuclap" class="ipsuimg" src="img/ipsuclap.png" onclick="clap()">
-      <h5  style="color:white; text-align:center; margin-top:5px;"> ^ click me! ^</h5>
-    </div>
-    <div class="animate__animated solidarity">
-      <p style="margin-top: 10px; color:white; text-align:center; font-size:100px;">I SUPPORT</p>
-      <p style="margin-top: -100px; color:white; text-align:center; font-size:100px;">AMOGUS SOLIDARITY</p>
-      <p style="margin-top: -200px; margin-bottom: 0px; color:white; text-align:center; font-size:300px;">𐐘🤝ඞ</p>
-    </div>
-  </body>
+    #ipsuclap:hover {
+      cursor: pointer;
+    }
+
+    .clapclass {
+      animation: rubberBand;
+      animation-duration: 0.1s;
+    }
+  </style>
+  <script>
+    // Preload clap.wav on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      var snd = new Audio("snd/clap.wav");
+      snd.preload = "auto";
+    });
+
+    function clap() {
+      var snd = new Audio("snd/clap.wav");
+      var element = document.getElementById('ipsuclap');
+
+      element.classList.add('clapclass');
+
+      snd.addEventListener('canplaythrough', function() {
+        setTimeout(function() {
+          element.classList.remove('clapclass');
+        }, 100); // Adjust the delay 1000 = 1s
+      });
+
+      snd.play();
+    }
+  </script>
+</head>
+
+<body style="background:black;">
+  <div class="top animate__animated">
+    <br>
+    <h1 style="color:white; text-align:center;">susu.gay</h1>
+    <h3 style="color:white; text-align:center;">welcome!</h3>
+    <img id="ipsuclap" class="ipsuimg" src="img/ipsuclap.png" onclick="clap()">
+    <h5 style="color:white; text-align:center; margin-top:5px;"> ^ click me! ^</h5>
+  </div>
+  <div class="animate__animated solidarity">
+    <p style="margin-top: 10px; color:white; text-align:center; font-size:100px;">I SUPPORT</p>
+    <p style="margin-top: -100px; color:white; text-align:center; font-size:100px;">AMOGUS SOLIDARITY</p>
+    <p style="margin-top: -200px; margin-bottom: 0px; color:white; text-align:center; font-size:300px;">𐐘🤝ඞ</p>
+  </div>
+</body>
+
 </html>
