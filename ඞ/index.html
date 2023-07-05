@@ -78,11 +78,10 @@
   <script>
     var centeredText = document.getElementById("centered-text");
     var videoContainer = document.getElementById("video-container");
-    var clicked = false;
 
     centeredText.addEventListener("click", function() {
-      if (!clicked) {
-        clicked = true;
+      if (!sessionStorage.getItem("videoPlayed")) {
+        sessionStorage.setItem("videoPlayed", "true");
         centeredText.classList.add("animate__fadeOut");
         setTimeout(function() {
           centeredText.style.display = "none";
