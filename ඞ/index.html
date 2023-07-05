@@ -78,15 +78,19 @@
   <script>
     var centeredText = document.getElementById("centered-text");
     var videoContainer = document.getElementById("video-container");
+    var clicked = false;
 
     centeredText.addEventListener("click", function() {
-      centeredText.classList.add("animate__fadeOut");
-      setTimeout(function() {
-        centeredText.style.display = "none";
-        centeredText.style.opacity = 1;
-        videoContainer.style.display = "block";
-        document.getElementById("video").play();
-      }, 1000); // Adjust the delay (in milliseconds) to match the duration of the fade-in animation
+      if (!clicked) {
+        clicked = true;
+        centeredText.classList.add("animate__fadeOut");
+        setTimeout(function() {
+          centeredText.style.display = "none";
+          centeredText.style.opacity = 1;
+          videoContainer.style.display = "block";
+          document.getElementById("video").play();
+        }, 1000); // Adjust the delay (in milliseconds) to match the duration of the fade-in animation
+      }
     });
 
     setTimeout(function() {
