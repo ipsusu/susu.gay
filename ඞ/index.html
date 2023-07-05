@@ -67,7 +67,7 @@
   <div id="centered-text" class="animate__animated">ඞ</div>
 
   <div id="video-container">
-    <video id="video" preload="auto">
+    <video id="video" autoplay preload="auto">
       <source src="https://files.catbox.moe/im2iim.mp4" type="video/mp4">
       <!--- credit: https://www.youtube.com/watch?v=fjuJgqrZSIk -->
       <!--- 720p60fps - https://files.catbox.moe/im2iim.mp4 -->
@@ -78,10 +78,11 @@
   <script>
     var centeredText = document.getElementById("centered-text");
     var videoContainer = document.getElementById("video-container");
+    var clicked = false;
 
     centeredText.addEventListener("click", function() {
-      if (!sessionStorage.getItem("videoPlayed")) {
-        sessionStorage.setItem("videoPlayed", "true");
+      if (!clicked) {
+        clicked = true;
         centeredText.classList.add("animate__fadeOut");
         setTimeout(function() {
           centeredText.style.display = "none";
