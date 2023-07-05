@@ -67,7 +67,7 @@
   <div id="centered-text" class="animate__animated">ඞ</div>
 
   <div id="video-container">
-    <video id="video" autoplay preload="auto">
+    <video id="video" preload="auto">
       <source src="https://files.catbox.moe/im2iim.mp4" type="video/mp4">
       <!--- credit: https://www.youtube.com/watch?v=fjuJgqrZSIk -->
       <!--- 720p60fps - https://files.catbox.moe/im2iim.mp4 -->
@@ -78,19 +78,23 @@
   <script>
     var centeredText = document.getElementById("centered-text");
     var videoContainer = document.getElementById("video-container");
-    var clicked = false;
+    var video = document.getElementById("video");
 
     centeredText.addEventListener("click", function() {
-      if (!clicked) {
-        clicked = true;
-        centeredText.classList.add("animate__fadeOut");
-        setTimeout(function() {
-          centeredText.style.display = "none";
-          centeredText.style.opacity = 1;
-          videoContainer.style.display = "block";
-          document.getElementById("video").play();
-        }, 1000); // Adjust the delay (in milliseconds) to match the duration of the fade-in animation
-      }
+      centeredText.classList.add("animate__fadeOut");
+      setTimeout(function() {
+        centeredText.style.display = "none";
+        centeredText.style.opacity = 1;
+        videoContainer.style.display = "block";
+        video.play();
+      }, 1000); // Adjust the delay (in milliseconds) to match the duration of the fade-out animation
+    });
+
+    video.addEventListener("ended", function() {
+      videoContainer.style.display = "none";
+      centeredText.style.display = "block";
+      centeredText.classList.remove("animate__fadeOut");
+      centeredText.classList.add("animate__fadeIn");
     });
 
     setTimeout(function() {
