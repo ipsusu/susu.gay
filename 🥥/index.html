@@ -72,6 +72,7 @@
         // Preload audio when the page is loaded
         var audio = new Audio('https://files.catbox.moe/rg2td0.mp3');
         audio.volume = 0.75; // Set volume to 75%
+        audio.loop = true; // Loop the audio continuously
         audio.preload = 'auto'; // Preload the audio
 
         function playMedia() {
