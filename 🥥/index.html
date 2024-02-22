@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🥥</title>
+    <title>Vertical Video Player</title>
     <style>
         body, html {
             margin: 0;
@@ -47,6 +47,11 @@
     <div id="coconut" onclick="playMedia()">🥥</div>
 
     <script>
+        // Preload audio when the page is loaded
+        var audio = new Audio('https://files.catbox.moe/rg2td0.mp3');
+        audio.volume = 0.75; // Set volume to 75%
+        audio.preload = 'auto'; // Preload the audio
+
         function playMedia() {
             var videoContainer = document.getElementById('video-container');
             var coconut = document.getElementById('coconut');
@@ -62,10 +67,7 @@
                 video.pause(); // Pause the video when it ends
             });
 
-            var audio = new Audio('https://files.catbox.moe/rg2td0.mp3');
-            audio.volume = 0.75; // Set volume to 75%
-            audio.preload = 'auto'; // Preload the audio
-            audio.play(); // Start playing the audio
+            audio.play(); // Start playing the preloaded audio
         }
     </script>
 </body>
