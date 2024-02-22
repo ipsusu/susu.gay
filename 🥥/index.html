@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Video Player</title>
+    <title>🥥</title>
     <style>
         body, html {
             margin: 0;
@@ -15,10 +15,10 @@
 
         #video-container {
             position: absolute;
-            top: -35%; /* Move video up by 200px */
+            top: -60%; /* Move video up */
             left: 0;
             width: 100%;
-            height: calc(100% + 35%); /* Adjusted height to accommodate for video movement */
+            height: calc(100% + 60%); /* Adjusted height to accommodate for video movement */
             overflow: hidden;
         }
 
@@ -37,6 +37,27 @@
             font-size: 100px;
             cursor: pointer;
             color: white;
+        }
+
+        @media (max-width: 1800px) {
+            #video-container {
+                top: -30%; /* Adjusted top value for low-width screens */
+                height: calc(100% + 30%); /* Adjusted height for low-width screens */
+            }
+        }
+
+        @media (max-width: 1350px) {
+            #video-container {
+                top: -20%; /* Adjusted top value for low-width screens */
+                height: calc(100% + 20%); /* Adjusted height for low-width screens */
+            }
+        }
+
+        @media (max-width: 800px) {
+            #video-container {
+                top: -5%; /* Adjusted top value for low-width screens */
+                height: calc(100% + 5%); /* Adjusted height for low-width screens */
+            }
         }
     </style>
 </head>
