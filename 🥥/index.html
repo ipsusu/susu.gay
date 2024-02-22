@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥥</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #video-container {
+            position: absolute;
+            top: -35%; /* Move video up by 200px */
+            left: 0;
+            width: 100%;
+            height: calc(100% + 35%); /* Adjusted height to accommodate for video movement */
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        #coconut {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video" src="https://files.catbox.moe/ojav7v.mp4" muted preload="auto"></video>
+    </div>
+    <div id="coconut" onclick="playMedia()">🥥</div>
+
+    <script>
+        function playMedia() {
+            var videoContainer = document.getElementById('video-container');
+            var coconut = document.getElementById('coconut');
+
+            videoContainer.style.display = 'block'; // Show the video container
+            coconut.style.display = 'none'; // Hide the coconut emoji
+
+            var video = document.getElementById('video');
+            video.muted = true; // Mute the video
+            video.play(); // Start playing the video
+
+            video.addEventListener('ended', function() {
+                video.pause(); // Pause the video when it ends
+            });
+
+            var audio = new Audio('https://files.catbox.moe/rg2td0.mp3');
+            audio.volume = 0.75; // Set volume to 75%
+            audio.preload = 'auto'; // Preload the audio
+            audio.play(); // Start playing the audio
+        }
+    </script>
+</body>
+</html>
