@@ -40,7 +40,7 @@
     <img src="zundamon.png" alt="Zundamon"> <!-- img credit https://danbooru.donmai.us/posts/5071402 https://p-lux.net/material_minithk.php  -->
   </a>
   <div id="video-container">
-    <video id="bg-video" preload="auto" loop autoplay muted volume="0.6">
+    <video id="bg-video" preload="auto" loop autoplay muted>
       <source src="world.mp4" type="video/mp4"> <!-- credit Wara1227 https://www.youtube.com/watch?v=nX2YH82GlZQ/ -->
       Your browser does not support the video tag.
     </video>
@@ -59,7 +59,7 @@
       e.preventDefault();
       imageLink.style.display = "none";
       videoContainer.style.display = "block";
-      video.volume = 0.25; // Lower the volume
+      video.volume = 0.3; // Lower the volume
       video.muted = false; // Unmute the video
       video.play();
 
