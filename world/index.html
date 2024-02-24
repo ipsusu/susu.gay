@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌎 warra world 🌎</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #E3FEBB; /* Initial background color */
+  }
+  #container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  #image-link, #video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #video-container {
+    display: none;
+  }
+  video {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <a id="image-link" href="#">
+    <img src="zundamon.png" alt="Zundamon"> <!-- img credit https://danbooru.donmai.us/posts/5071402 https://p-lux.net/material_minithk.php  -->
+  </a>
+  <div id="video-container">
+    <video id="bg-video" preload="auto" loop autoplay muted volume="0.6">
+      <source src="world.mp4" type="video/mp4"> <!-- credit Wara1227 https://www.youtube.com/watch?v=nX2YH82GlZQ/ -->
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const imageLink = document.getElementById("image-link");
+    const videoContainer = document.getElementById("video-container");
+    const video = document.getElementById("bg-video");
+    const container = document.getElementById("container");
+    let updateInterval;
+
+    imageLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      imageLink.style.display = "none";
+      videoContainer.style.display = "block";
+      video.muted = false; // Unmute the video
+      video.play();
+
+      updateInterval = setInterval(updateBackgroundColor, 1000);
+    });
+
+    function updateBackgroundColor() {
+      const canvas = document.createElement("canvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      const bottomRightColor = getBottomRightPixelColor(canvas, ctx);
+      const rgbString = `rgb(${bottomRightColor[0]}, ${bottomRightColor[1]}, ${bottomRightColor[2]})`;
+      container.style.backgroundColor = rgbString;
+    }
+
+    function getBottomRightPixelColor(canvas, ctx) {
+      const x = canvas.width - 1;
+      const y = canvas.height - 1;
+      const pixelData = ctx.getImageData(x, y, 1, 1).data;
+      return [pixelData[0], pixelData[1], pixelData[2]];
+    }
+  });
+</script>
+</body>
+</html>
