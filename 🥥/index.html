@@ -67,7 +67,7 @@
 <body>
     <div id="video-container">
         <!-- <video id="video" src="https://files.catbox.moe/ojav7v.mp4" muted preload="auto"></video> --> 
-        <video id="video" src="coco.mp4" muted preload="auto"></video>
+        <video id="video" src="coco.mp4" muted preload="auto" loop></video>
     </div>
     <div id="coconut" onclick="playMedia()">🥥</div>
 
@@ -84,7 +84,7 @@
 
             videoContainer.style.display = 'block'; // Show the video container
             coconut.style.display = 'none'; // Hide the coconut emoji
-
+            document.body.style.backgroundColor = "#7F7C60";
             var video = document.getElementById('video');
             video.muted = true; // Mute the video
             video.play(); // Start playing the video
