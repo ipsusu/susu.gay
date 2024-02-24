@@ -15,13 +15,15 @@
         }
 
         #video-container {
-            position: absolute;
-            top: -60%; /* Move video up */
-            left: 0;
-            width: 100%;
-            height: calc(100% + 60%); /* Adjusted height to accommodate for video movement */
-            overflow: hidden;
-        }
+        display: none; /* Hide the video container initially */
+        position: absolute;
+        top: -60%; /* Move video up */
+        left: 0;
+        width: 100%;
+        height: calc(100% + 60%); /* Adjusted height to accommodate for video movement */
+        overflow: hidden;
+}
+
 
         video {
             width: 100%;
@@ -65,13 +67,13 @@
 <body>
     <div id="video-container">
         <!-- <video id="video" src="https://files.catbox.moe/ojav7v.mp4" muted preload="auto"></video> --> 
-        <video id="video" src="https://files.catbox.moe/p12kwn.mp4" muted preload="auto"></video>
+        <video id="video" src="coco.mp4" muted preload="auto"></video>
     </div>
     <div id="coconut" onclick="playMedia()">🥥</div>
 
     <script>
         // Preload audio when the page is loaded
-        var audio = new Audio('https://files.catbox.moe/rg2td0.mp3');
+        var audio = new Audio('coco.mp3');
         audio.volume = 0.25; // Set volume to 25%
         audio.loop = true; // Loop the audio continuously
         audio.preload = 'auto'; // Preload the audio
