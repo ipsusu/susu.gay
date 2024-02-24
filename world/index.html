@@ -59,6 +59,7 @@
       e.preventDefault();
       imageLink.style.display = "none";
       videoContainer.style.display = "block";
+      video.volume = 0.25; // Lower the volume
       video.muted = false; // Unmute the video
       video.play();
 
