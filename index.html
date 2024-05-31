@@ -1,84 +1,131 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <style>
-    .center {
-      margin: auto;
-      width: 50%;
-    }
-
-    .ipsuimg {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .solidarity {
-      animation: bounceInUp;
-      animation-fill-mode: both;
-      animation-delay: 1s;
-      animation-duration: 1s;
-    }
-
-    .top {
-      animation: backInDown;
-      animation-duration: 1s;
-
-    }
-
-    #ipsuclap:hover {
-      cursor: pointer;
-    }
-
-    .clapclass {
-      animation: rubberBand;
-      animation-duration: 0.1s;
-    }
-    
-    .munglink {
-      color: white;
-      text-decoration: none; /* no underline */
-    }
-  </style>
-  <script>
-    // Preload clap.wav on page load
-    window.addEventListener('DOMContentLoaded', function() {
-      var snd = new Audio("snd/clap.wav");
-      snd.preload = "auto";
-    });
-
-    function clap() {
-      var snd = new Audio("snd/clap.wav");
-      var element = document.getElementById('ipsuclap');
-
-      element.classList.add('clapclass');
-
-      snd.addEventListener('canplaythrough', function() {
-        setTimeout(function() {
-          element.classList.remove('clapclass');
-        }, 100); // Adjust the delay 1000 = 1s
-      });
-
-      snd.play();
-    }
-  </script>
+    <title>susu.gay</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+        body {
+            font-family: Ubuntu Sans Mono;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            height: 100vh;
+            border: 0;
+            background-color: black;
+        }
+        td.left {
+            max-width: 200px !important;
+            min-width: 200px !important;
+            vertical-align: top;
+            padding: 10px;
+            padding-left: 50px;
+        }
+        td.right {
+            width: 66.666666%;
+            vertical-align: top;
+            padding: 10px;
+            padding-left: 50px;
+            background-color: rgb(0, 0, 0);
+            padding-right: 50px;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .infolinks {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            width: 185px;
+        }
+        .infolinks a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        a:hover {
+            color: rgb(168, 168, 168);
+        }
+        .content {
+            display: none;
+        }
+        .content:target {
+            display: block;
+        }
+        #ipsuclap:hover {
+            cursor: pointer;
+        }
+        .clapclass {
+            animation: rubberBand;
+            animation-duration: 0.1s;
+        }
+    </style>
 </head>
+<body>
+    <table>
+        <tr>
+            <td class="left">
+                <h1>susu.gay</h1>
+                <p>welcome to my website :3</p>
+                <ul class="infolinks">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#social">social</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#github">github</a></li>
+                    <li><a href="#stuff">stuff</a></li>
+                </ul>
+            </td>
+            <td class="right">
+                <div id="about" class="content">
+                    <h1>about</h1>
+                    <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. praesent a condimentum est, eget vestibulum lorem. aliquam lobortis ligula dignissim metus euismod molestie. maecenas mi sapien, auctor in enim id, dictum viverra nisi. fusce sodales felis sit amet mollis bibendum. aliquam ac pulvinar enim, quis commodo augue. praesent enim magna, rhoncus in lacus non, iaculis condimentum sapien. phasellus et posuere nisi. maecenas facilisis lacus sit amet est pulvinar ullamcorper. maecenas ut odio mauris. sed non posuere est.</p>
+                    <div class="animate__animated" style="width:200px;margin:auto;padding-right:50px;">
+                        <img id="ipsuclap" draggable="false" onclick="clap()" style="width:200px;display: block;" src="img/ipsuclap.png">
+                    </div>
+                </div>
+                <div id="social" class="content">
+                    <h1>social</h1>
+                    <p>this is the social section.</p>
+                </div>
+                <div id="projects" class="content">
+                    <h1>projects</h1>
+                    <p>here are some of my projects.</p>
+                </div>
+                <div id="github" class="content">
+                    <h1>github</h1>
+                    <p>github stuff.</p>
+                </div>
+                <div id="stuff" class="content">
+                    <h1>stuff</h1>
+                    <p>here is cool stuff.</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- you dont need js for this site this is jus silly stuff -->
+    <script>
+        function clap() {
+            var snd = new Audio("snd/clap.wav");
+            var element = document.getElementById('ipsuclap');
 
-<body style="background:black;">
-  <div class="top animate__animated">
-    <br>
-    <h1 style="color:white; text-align:center;">susu.gay</h1>
-    <h3 style="color:white; text-align:center;">welcome!</h3>
-    <img id="ipsuclap" class="ipsuimg" src="img/ipsuclap.png" onclick="clap()" draggable="false">
-    <h5 style="color:white; text-align:center; margin-top:5px;"> ^ click me! ^</h5>
-  </div>
-  <div class="animate__animated solidarity">
-    <p style="margin-top: 10px; color:white; text-align:center; font-size:100px;">I SUPPORT</p>
-    <p style="margin-top: -100px; color:white; text-align:center; font-size:100px;">AMOGUS SOLIDARITY</p>
-    <p style="margin-top: -200px; margin-bottom: 0px; color:white; text-align:center; font-size:300px;">𐐘🤝<a class="munglink" href="ඞ/">ඞ</a></p>
-  </div>
+            element.classList.add('clapclass');
+
+            snd.addEventListener('canplaythrough', function() {
+                setTimeout(function() {
+                    element.classList.remove('clapclass');
+                }, 100); // Adjust the delay 1000 = 1s
+            });
+
+            snd.play();
+        }
+    </script>
 </body>
-
 </html>
