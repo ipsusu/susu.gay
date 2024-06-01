@@ -4,6 +4,7 @@
     <title>susu.gay</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <meta name="darkreader-lock"> <!-- this is to prevent darkreader from changing the background color, since it's already darkmode! -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
         body {
@@ -38,6 +39,9 @@
         h1 {
             font-size: 30px;
         }
+        #susugay {
+            padding-left: 22px;
+        }
         p {
             font-size: 14px;
             max-width: 1000px;
@@ -56,14 +60,26 @@
             color: white;
             font-weight: bold;
         }
+        #sociallinks {
+            padding-left: 24px;
+        }
+        a:link {
+            color: white;
+        }
+        a:visited {
+            color: white;
+        }
         a:hover {
-            color: rgb(168, 168, 168);
+            color: rgb(168, 168, 168) !important;
         }
         .content {
             display: none;
         }
         .content:target {
             display: block;
+        }
+        .content#about {
+            max-width: 800px;            
         }
         #ipsuclap:hover {
             cursor: pointer;
@@ -78,42 +94,59 @@
     <table>
         <tr>
             <td class="left">
-                <h1>susu.gay</h1>
+                <h1 id="susugay">susu.gay</h1>
                 <p>welcome to my website :3</p>
                 <ul class="infolinks">
                     <li><a href="#about">about</a></li>
                     <li><a href="#social">social</a></li>
                     <li><a href="#projects">projects</a></li>
-                    <li><a href="#github">github</a></li>
                     <li><a href="#stuff">stuff</a></li>
                 </ul>
             </td>
             <td class="right">
                 <div id="about" class="content">
                     <h1>about</h1>
-                    <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. praesent a condimentum est, eget vestibulum lorem. aliquam lobortis ligula dignissim metus euismod molestie. maecenas mi sapien, auctor in enim id, dictum viverra nisi. fusce sodales felis sit amet mollis bibendum. aliquam ac pulvinar enim, quis commodo augue. praesent enim magna, rhoncus in lacus non, iaculis condimentum sapien. phasellus et posuere nisi. maecenas facilisis lacus sit amet est pulvinar ullamcorper. maecenas ut odio mauris. sed non posuere est.</p>
+                    <p>hello! i'm ipsu (or ipsusu, or susu).</p>
+                    <p>i prefer they/them pronouns, but you can use whatever feels natural to you, i don't really mind!</p>
+                    <p>i play as the character "Ipsusu Ipsu" in FFXIV. i have another website <a target="_blank" href="xiv/">here</a> for my FFXIV characters.</p>
+                    <p>i'm most well known for my IpsuShade ReShade preset collection for FFXIV. they're a set of simple presets that are highly optimised for performance and quality. you can find more about them: <a href="#projects">here.</a></p>
+                    <p>i'm very bad at staying in touch with people, but feel free to message me if you wanna chat :)</p>
+                    <p>if you need to contact me for anything, my discord is <i>ipsusu</i>.</p>
                     <div class="animate__animated" style="width:200px;margin:auto;padding-right:50px;">
                         <img id="ipsuclap" draggable="false" onclick="clap()" style="width:200px;display: block;" src="img/ipsuclap.png">
                     </div>
                 </div>
                 <div id="social" class="content">
                     <h1>social</h1>
-                    <p>this is the social section.</p>
+                    <div id="sociallinks">
+                        <p style="font-weight: bold;margin-left:-24px;">i use the most:</p>
+                        <p><a target="_blank" href="https://twitter.com/ipsusu">twitter</a></p>
+                        <p><a target="_blank" href="https://ip.susu.gay">bluesky</a> (will use more when they add user uploaded videos)</p>
+                        <p style="font-weight: bold;margin-left:-24px;">i use rarely:</p>
+                        <p><a target="_blank" href="https://ipsusu.tumblr.com">tumblr</a></p>
+                        <p><a target="_blank" href="https://www.reddit.com/user/ipsusu/">reddit</a></p>
+                        <p><a target="_blank" href="https://www.tiktok.com/@ipsusu">tiktok</a></p>
+                    </div>
                 </div>
                 <div id="projects" class="content">
                     <h1>projects</h1>
-                    <p>here are some of my projects.</p>
+                    <h3>IpsuShade</h3>
+                    <p>this is my biggest and most popular project!</p>
+                    <p>please check the following page for more information: <a target="_blank" href="https://github.com/ipsusu/IpsuShade">IpsuShade GitHub</a> 
+                    <p>i'll update this page with more content once i have a bit more free time...</p>
                 </div>
+                <!--
                 <div id="github" class="content">
                     <h1>github</h1>
                     <p>github stuff.</p>
                 </div>
+                -->
                 <div id="stuff" class="content">
                     <h1>stuff</h1>
-                    <p>here is cool stuff.</p>
-                    <p style="margin-top:-14px;color:white;font-size:40px;">𐐘🤝<a target="_blank" style="color:white;text-decoration: none;" href="ඞ/">ඞ</a></p>
-                    <p style="padding-left: 30px; margin-top:-28px;color:white;font-size:40px;"><a target="_blank" style="color:white;text-decoration: none;" href="🥥/">🥥</a></p>
-                    <p style="padding-left: 30px; margin-top:-28px;color:white;font-size:40px;"><a target="_blank" style="color:white;text-decoration: none;" href="world/">🌎</a></p>
+                    <p>here are some of the dumb things i've made over the years.</p>
+                    <p style="color:white;">mungus solidarity ! 𐐘🤝<a target="_blank" style="color:white;text-decoration: none;" href="ඞ/">ඞ</a> <a style="color: rgb(19, 19, 19);"><----</a> </p>
+                    <p style="color:white;"><a target="_blank" style="color:white;text-decoration: none;" href="🥥/">yummy 🥥</a></p>
+                    <p style="color:white;"><a target="_blank" style="color:white;text-decoration: none;" href="world/">woa! 🌎</a></p>
                 </div>
             </td>
         </tr>
