@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ipsuShade</title>
+    <style>
+        @font-face {
+            font-family: 'Johnston';
+            src: url('johnston100-medium.otf');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Johnston';
+            src: url('new-johnston-medium-3.ttf');
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Johnston';
+            src: url('johnston100.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Johnston';
+            src: url('johnston100-light.otf');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Johnston', Arial, sans-serif;
+            font-weight: 300;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+        }
+
+        .header {
+            font-size: 12em;
+            font-weight: bold;
+        }
+
+        .content {
+            margin-top: -60px;
+            font-size: 1.5em;
+        }
+
+        .content p {
+            max-width: 760px;
+            margin-bottom: 10px;
+            margin-left: 120px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .version {
+            padding-left: 78px; 
+        }
+
+        .links {
+            padding-left: 50px;
+        }
+
+        @media (max-width: 950px) {
+            .container {
+                width: 650px;
+            }
+
+            .header {
+                font-size: 7em;
+                padding-left: 50px;
+            }
+
+            .content {
+                margin-top: -40px;
+                margin-left: 0px;
+                font-size: 1.4em;
+            }
+
+            .content p {
+                max-width: 540px;
+                margin-bottom: 10px;
+            }
+
+            .version {
+                padding-left: 22px; 
+             }
+
+            .links {
+                padding-left: 0px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .container {
+                width: 650px;
+                margin-left: -50px;
+            }
+
+            .header {
+                font-size: 7em;
+                padding-left: 50px;
+            }
+
+            .content {
+                margin-top: -40px;
+                margin-left: 0px;
+                font-size: 1.4em;
+            }
+
+            .content p {
+                max-width: 540px;
+                margin-bottom: 10px;
+            }
+
+            .version {
+                padding-left: 22px; 
+             }
+
+            .links {
+                padding-left: 0px;
+            }
+
+        }
+
+        a:link {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        a:hover {
+            color: rgb(168, 168, 168) !important;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">ipsuShade</div>
+        <div class="content">
+            <p>is a <strong>ReShade</strong> preset collection <strong>(with GShade support)</strong> that aims to deliver maximum quality at maximum FPS with the <strong>Gameplay, Questing </strong>and <strong> Lite</strong> variant presets, but also provide high fidelity screenshots with the <strong>Screenie, Ultimate</strong> and <strong> Pro Suite</strong> preset types.</p>
+            <p>Each preset type comes in a range of <strong> 7 </strong>included colour variants.</p>
+            <p class="version" style="vertical-align: middle;"><strong>Current Version:</strong> <span style="font-size:50px; vertical-align: middle;"> 2.0 </span> <strong>- 2023 / 08 / 10</strong></p>
+            <p class="links"><a style="font-weight: bold;" href="https://github.com/ipsusu/ipsuShade">Download</a> | <a style="font-weight: bold;" href="#">Twitter</a> | <a style="font-weight: bold;" href="https://github.com/ipsusu/ipsuShade">GitHub</a> | <a style="font-weight: bold;" href="https://www.nexusmods.com/finalfantasy14/mods/2000">NexusMods</a></p>
+        </div>
+    </div>
+</body>
+</html>
