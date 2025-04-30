@@ -50,14 +50,20 @@ FUMO JUMPSCARE !
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> <!-- for dumb clap animation -->
     <meta name="darkreader-lock"> <!-- this is to prevent darkreader from changing the background color, since it's already darkmode! -->
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
-        p {
-            line-height: 1.35rem;
+        label {
+            font-family: 'Ubuntu Sans Mono', monospace;
+        }
+        
+        #fonttogglecontainer {
+            font-family: 'Ubuntu Sans Mono', monospace;
+        }
+        #fontToggle:checked + label + #fonttogglecontainer {
+            font-family: 'Open Sans', sans-serif;
         }
 
         body {
-            font-family: Ubuntu Sans Mono;
             background-color: black;
             color: white;
             margin: 0;
@@ -72,6 +78,7 @@ FUMO JUMPSCARE !
         }
 
         td.left {
+            font-family: 'Ubuntu Sans Mono', monospace !important;
             width: 190px;
             vertical-align: top;
             padding: 10px;
@@ -303,7 +310,7 @@ FUMO JUMPSCARE !
             @media (max-width: 768px) {
                 display: block;
                 position: fixed;
-                top: 0px;
+                top: 25px;
                 right: 0px;
                 font-size: 12px;
                 color: white;
@@ -366,6 +373,10 @@ FUMO JUMPSCARE !
     </style>
 </head>
 <body>
+    <input type="checkbox" id="fontToggle" style="display:none;">
+    <label for="fontToggle" style="position:fixed;font-size:14px;background: #000000;bottom:10px;left:10px;z-index:1000;cursor:pointer;padding:10px;color:rgb(141, 141, 141);
+    ;font-weight:bold;">Toggle Font</label>
+    <div id="fonttogglecontainer">
     <table>
         <tr>
             <td class="left">
@@ -449,6 +460,7 @@ FUMO JUMPSCARE !
                     }
                     .blogcontent {
                         max-width: 600px;
+                        text-align: justify;
                     }
                     .blogheading {
                         margin-bottom: 0px;
@@ -477,19 +489,19 @@ FUMO JUMPSCARE !
                     <h2>the "buh pad" review !</h1>
                     <h4><a href="#blog"><-- go back</a> | 2025-04-26 | by susu </h4> 
                     <h4>** note: product was provided for free by X-Raypad for review. i was not paid for this review, i just wanted to try out the pad! **</h4>
-                    <p><b>TLDR:</b> the custom print process is very good, and the x-raypad aqua control pro mid is a safe recommendation for anyone looking for a high quality, fast cloth pad with a balanced static/dynamic friction profile.</p>
+                    <p><b>TLDR:</b> the custom print process is very good, and the x-raypad aqua control pro mid is a safe recommendation for anyone looking for a high quality, speed-focused cloth pad with a balanced static/dynamic friction profile.</p>
                     <p><img src="img/buhpadofficial.jpg" class="blogimg" loading="lazy"></p>
                     <p class="captionline">my buh pad - img credit X-Raypad Jiuson, this was the image i was sent after production, just before the pad was shipped to me!</p>
                     <h2 class="blogheading">1. pad specs and overview</h2>
                     <ul>
-                        <li><p><b>artwork:</b> anything you want! i think xraypad are less picky about copyright of the img, so it's fully custom to what you want, with an optional “AQUA CONTROL <b>PRO</b> | MID <i>by X-raypad</i>” logo in top right.</p>
+                        <li><p><b>artwork:</b> anything you want! i think xraypad are less picky about copyright of the image, so it's fully custom to what you want, with an optional “AQUA CONTROL <b>PRO</b> | MID <i>by X-raypad</i>” logo in top right.</p>
                             <p>it does however require a high quality image source. ideally around 2000x2000px. you can use upscaling to get it to that quality! that's what I did with this image. a 720p source png from <a href="https://www.tiktok.com/@oscarbigears/video/7043805649557327110" target="_blank">the original buh tiktok vid (oscar!)</a> upscaled to 1968 x 1693 px: <a href="img/buhpadfullfinalver.png" target="_blank">link</a>.</p>
                             <p>as you can see, the image doesnt need to be super sharp to look good, just make sure it's clean and without any compression or digital artifacting.</p>
                         </li>
-                        <li><p><b>packaging:</b> flat, strong card and pad in soft plastic bag</p></li>
-                        <li><p><b>surface:</b> textured cloth. “heated treatment” like neon variant</p></li>
-                        <li><p><b>base:</b> 4mm "∑ honeycomb"  poron</p></li>
-                        <li><p class="reviewline"><b>stitch:</b> below surface, high quality. artwork is printed over the stitching, what they call a “clear stitched edged”, but other custom mousepad types allow you to have just a plain white or black stitched edge.</p></li>
+                        <li><p><b>packaging:</b> packed flat in a strong card envelope, with the pad stored inside a soft plastic bag/wrap</p></li>
+                        <li><p><b>surface:</b> textured cloth. “heated treatment” like the <a href="https://shop.x-raypad.com/shop/x-raypad-aqua-control-pro-gaming-mouse-pads-ac-pro/" target="_blank">neon version</a></p></li>
+                        <li><p><b>base:</b> 4mm thick, "∑ honeycomb"  poron</p></li>
+                        <li><p class="reviewline"><b>stitch:</b> below surface, high quality. artwork is printed over the stitching, what they call a “clear stitched edged”. worth nothing that other xraypad custom pad types allow instead to have just a plain white or black stitched edge.</p></li>
                         <li><p class="reviewlineclose"><b>size options:</b> my copy is 450 x 400 mm (currently out of stock). the other sizes they offer are:</p>
                         <p class="reviewlineclose"> - 360 x 300 mm - $48.80</p>
                         <p class="reviewlineclose"> - 490 x 420 mm - $69.80</p>
@@ -515,7 +527,7 @@ FUMO JUMPSCARE !
                     <p class="reviewline"><b>2025-04-04</b> - delivered!</p>
                     <p class="reviewline"><b>total time</b> - 10-ish days</p>
                     <h2 class="blogheading">5. surface</h2>
-                    <p>the custom print ac pro mid, uses the same "heat treated" surface as the ac pro mid neon variant. the textured surface is good for providing tactile feedback during your mouse movements, however i find it too rough to use for long periods without a sleeve. the small hairs on the underside of my forearm tend to get gently snagged on the weave every now and then, alongside the weave just being irritating on my skin over time.</p>
+                    <p>the custom print ac pro mid, uses the same “heated treatment” surface as the ac pro mid neon variant. the textured surface is good for providing tactile feedback during your mouse movements, however i find it too rough to use for long periods without a sleeve. the small hairs on the underside of my forearm tend to get gently snagged on the weave every now and then, alongside the weave just being irritating on my skin over time.</p>
                     <p>this discomfort can be entirely mitigated by using a sleeve, and it’s perfect with my pulsar es palm long sleeve. i spent the majority of my time using the pad with this sleeve. i can’t see it having incompatibility with any sleeve type. if you don't want to / can’t wear a sleeve, i would not recommend this pad if you are sensitive to irritation from pad surfaces.</p>
                     <p><img src="img/acpromidweave.jpg" class="blogimg" loading="lazy"></p>
                     <p class="captionline">a close up of the weave in a white printed section of the pad</p>
@@ -526,19 +538,19 @@ FUMO JUMPSCARE !
                     <p>the grippiness of the pad base sadly isn’t very good for my usecase. i stack my pads ontop of eachother due to limited space, but even ontop of my pulsar superglide glass pad, which normally provides a bunch of grip on my esptiger tang dao and artisan otsu, the ac pro mid base can’t find a solid grip and slightly moves if i push it. the lack of grip is the same on my xraypad heavybee p-chen (control/purple version) which uses the same “sigma” (∑) honeycomb poron base, so i think it’s just an issue with this base grip. the neon variant of the ac pro mid uses a different base that other reviewers say is very sticky, so perhaps you could request this version.</p>
                     <p>i have also heard that if you use wet the base a little bit, it grips alot more. i do think the dryness of the materal used makes it much slippier, so i can see that adding a bit of moisture would help adhesion to the desk.</p>
                     <h2 class="blogheading">7. edge stitching</h2>
-                    <p>the stitching seems to be great quality. its a thin edge, with a tight stitch and is slightly below the surface of pad. the artwork print extending onto the stitching is a nice touch, it's even partly on the edges somehow!</p>
+                    <p>the stitching seems to be great quality. it's a thin edge, with a tight stitch and is slightly below the surface of pad. the artwork print extending onto the stitching is a nice touch, it's even partly on the edges somehow!</p>
                     <p>they only offer this “clear stitched edged” version for the ac pro mid, but other custom mousepad types allow you to have just a plain white or black stitched edge.</p>
                     <p><img src="img/bottomleftstitch.jpg" class="blogimg" loading="lazy"></p>
                     <p class="captionline">the stitching and print on the bottom left corner of the pad</p>
                     <h2 class="blogheading">8. glide / friction profile</h2>
-                    <p>this pad seems to have pretty well balanced, low static and dynamic friction, and it is definitely more fast than it is controlled. even when pushing down into the pad with dots, friction is only slightly increased, due to the hardness of the “mid” base.</p>
-                    <p>i don’t have many similar pads to compare it against, but it has been <a href="https://prosettings.net/reviews/xraypad-aqua-control-pro/" target="_blank">compared to the artisan hien by other reviewers</a>, and others who i’ve asked about this agree (just a bit less textured surface).</p>
-                    <p>i would say it's just a safe glide profile if you are looking for speed. it feels similar to the dynamic friction of the artisan hayate otsu, but without the high static friction.</p>
-                    <p>the static friction seems slightly higher than the dynamic, but this is modified by skates a ton, so your experience may vary.</p>
+                    <p>this pad seems to have low friction overall for a cloth pad, with an equal balance between static and dynamic friction. it is definitely more fast than it is controlled. even when pushing down into the pad with dots, friction is only slightly increased, due to the hardness of the “mid” base.</p>
+                    <p>i don’t have many similar "speed" cloth pads to compare it against, but it has been <a href="https://prosettings.net/reviews/xraypad-aqua-control-pro/" target="_blank">compared to the artisan hien by other reviewers</a>, and others who i’ve asked about this agree (just a bit less textured surface).</p>
+                    <p>i would say it's just a safe glide profile if you are looking for a faster cloth pad, but don't want to go as fast as most glass offerings. it feels similar to the dynamic friction of the artisan hayate otsu, but without the high static friction.</p>
+                    <p>the static friction does seem *slightly* higher than the dynamic, but this is modified by skates a ton, so your experience may vary. i have no way to test this currently, sorry...</p>
                     <p>the friction is even across the X and Y axes.</p>
                     <p>the static friction increases slightly from the day 1 experience as the weave gets a chance to wear a little. i can’t say how the pad wears over time, but i expect it to not change too significantly after the initial break-in period, as the pad seems of sufficient quality and the weave of the pad isn’t particularly delicate.</p>
                     <h2 class="blogheading">9. overall conclusion</h2>
-                    <p>the x-raypad aqua control pro mid is a safe recommendation for anyone looking for a high quality, fast cloth pad with a balanced static/dynamic friction profile.</p>
+                    <p>the <b>X-Raypad Aqua Control Pro | Mid</b> is a safe recommendation for anyone looking for a high quality, speed-focused cloth pad with a balanced static/dynamic friction profile.</p>
                     <p>the custom printing process was a highlight, with great communication and previews of the pad provided before/after production.</p>
                     <p>the pricing seems fair considering the added labour involved with the design + printing process, and the fact that the flat packed shipping is included in this cost. i would say the pad itself is worth maybe $30-45 (depending on size), and you’re paying the extra for the custom printing process and included shipping.</p>
                     <p>if you're not comfortable paying the premium for the custom print, you can buy a premade ac pro mid for neon $40-50 on aliexpress.</p>
@@ -548,6 +560,7 @@ FUMO JUMPSCARE !
             </td>
         </tr>
     </table>
+    </div>
     <p class="mobiledisclaim">pls dont use this site on mobile i cant be bothered to style it properly... ඞ</p>
     <!-- you dont need js for this site this is jus silly stuff -->
     <script>
