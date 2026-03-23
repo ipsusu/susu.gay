@@ -57,9 +57,15 @@ FUMO JUMPSCARE !
         }
         
         #fonttogglecontainer {
-            font-family: 'Ubuntu Sans Mono', monospace;
+            font-family: 'Open Sans', sans-serif;
         }
-        #fontToggle:checked + label + #fonttogglecontainer {
+        /* font toggle preserved for future use - currently overridden by default Open Sans below */
+        /* #fontToggle:checked + label + #fonttogglecontainer {
+            font-family: 'Open Sans', sans-serif;
+        } */
+
+        /* apply Open Sans everywhere except h1 and .left */
+        #fonttogglecontainer *:not(h1):not(.left):not(.left *) {
             font-family: 'Open Sans', sans-serif;
         }
 
@@ -374,8 +380,7 @@ FUMO JUMPSCARE !
 </head>
 <body>
     <input type="checkbox" id="fontToggle" style="display:none;">
-    <label for="fontToggle" style="position:fixed;font-size:14px;background: #000000;bottom:10px;left:10px;z-index:1000;cursor:pointer;padding:10px;color:rgb(141, 141, 141);
-    ;font-weight:bold;">Toggle Font</label>
+    <label for="fontToggle" style="display:none;">Toggle Font</label>
     <div id="fonttogglecontainer">
     <table>
         <tr>
@@ -584,5 +589,20 @@ FUMO JUMPSCARE !
             snd.play();
         }
     </script>
+<script>
+    function autoFontForBlog() {
+        const hash = window.location.hash;
+        const toggle = document.getElementById('fontToggle');
+        if (!toggle) return;
+        if (hash) {
+            const target = document.querySelector(hash);
+            if (target && target.classList.contains('blogcontent')) {
+                toggle.checked = true;
+            }
+        }
+    }
+    window.addEventListener('load', autoFontForBlog);
+    window.addEventListener('hashchange', autoFontForBlog);
+</script>
 </body>
 </html>
